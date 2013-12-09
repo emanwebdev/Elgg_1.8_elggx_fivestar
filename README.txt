@@ -1,6 +1,6 @@
 Elggx Fivestar plugin for Elgg 1.8
-Latest Version: 1.8.1
-Released: 2012-02-12
+Latest Version: 1.8.6
+Released: 2013-11-03
 Contact: iionly@gmx.de
 License: GNU General Public License version 2
 Copyright: (c) iionly (for Elgg 1.8 version), Billy Gunn
@@ -12,10 +12,14 @@ This plugin will add a voting widget to certain views on your site, for example 
 
 Installation:
 
-1. Copy the elggx_fovestar folder into the mod directory of your Elgg installation,
+(0. If you have installed a previous version of the Elggx Fivestar plugin disable the plugin in the admin section of your site and then remove the elggx_fivestar folder from the mod directory of your Elgg installation,)
+1. Copy the elggx_fivestar folder into the mod directory of your Elgg installation,
 2. Enable the plugin in the admin section of your site,
 3. Configure then the plugin settings (section "Administer" - "Utilities" - "Elggx Fivestar"). At least it's necessary to add the rating widget to some views for the Elggx Fivestar plugin being useable. Via the plugin settings you can add the rating widget to some pre-defined default views. In the following is described in detail how the configuration of the rating widget for more views works in detail.
 
+
+
+How to customize it:
 
 To include the rating widget on your site after enabling the Elggx Fivestar plugin for the first time (or after upgrading from a version of Elggx Fivestar < 1.8.0) you need to set the default views on Elggx Fivestar's plugin settings page in the admin section of your site ("Administer" - "Utilities" - "Elggx Fivestar"). Click on "Set / Reset default views" and save the settings. There are already some default views defined in start.php where the rating widget will be included on your site, for example on blogs, pages and group discussions.
 
@@ -57,9 +61,37 @@ In this case the default css layout of the voting widget is used. Still, you mus
 
 Changelog:
 
+1.8.6:
+
+- Fixed error in activate.php,
+- Updated simple_html_dom.php library.
+
+
+1.8.5:
+
+- There're not really any changes. I only forgot to update the version number in activate.php correctly for Elggx Fivestar 1.8.4, so the version 1.8.5 does correct this - by switching directly to 1.8.5...
+
+
+1.8.4:
+
+- Fix for Elggx Fivestar plugin to work in Elgg 1.8.14 with simple cache enabled.
+
+
+1.8.3:
+
+- Some general code cleanup,
+- Update of simple_html_dom library to latest version,
+- Updated the default views (to use them you need to Set/Reset the default views in the Elggx Fivestar plugin configuration in the section "Administer" - "Utilities" - "Elggx Fivestar").
+
+
+1.8.2:
+
+- French translation added (thank to emanwebdev),
+- German translation added.
+
 1.8.1 (by iionly):
 
--Adding/removing views via the plugin settings page should work now.
+- Adding/removing views via the plugin settings page should work now.
 (It was necessary to move the plugin settings to the "Administer" - "Utilities" section as the Elgg core save button added automatically on pages in the "Configure" - "Settings" section failed to keep the content of the views array. When upgrading please remove the old Elggx Fivestar folder before copying the files of the new version on your server.)
 
 
